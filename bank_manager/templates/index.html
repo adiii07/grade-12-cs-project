@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank | Home</title>
+</head>
+<body>
+    {% extends "layout.html" %}
+    {% block body %}
+
+    <div class="landing-page">
+        <div>
+            <h1><span style="font-size: 65px;">Join Us for <br>FREE</span></h1> 
+            <h2>Open Your Account <br>Now!</h2>
+            <a class="main-btn" href="/register/">Register Now!</a>
+        </div>
+        {% load static %}
+        <img src="{%static 'assets/logo/full_logo.png' %}" alt="BRS Bank Logo">
+    </div>
+
+    <div id="services">
+        <div class="service">
+            <img height="200px" src="{% static 'assets/online_banking.jpeg' %}" alt="">
+            <p>Secure and easy to use Online Banking</p>
+        </div>
+
+        <div class="service">
+            <img height="200px" src="{% static 'assets/transfer.png' %}" alt="">
+            <p>Transfer money to friends and family with only email!</p>
+        </div>
+
+        <div class="service">
+            <img height="200px" src="{% static 'assets/transactions.jpeg' %}" alt="">
+            <p>View transaction history with just one click!</p>
+        </div>
+    </div>
+
+    {% endblock %}
+</body>
+</html>

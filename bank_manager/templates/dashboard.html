@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank | Dashboard</title>
+</head>
+<body>
+    {% extends "layout.html" %}
+    {% block body %}
+
+    <div class="menu">
+        <a href="/dashboard/{{CURRENT_USER}}/deposit">Deposit</a>
+        <a href="/dashboard/{{CURRENT_USER}}/withdraw">Withdraw</a>
+        <a href="/dashboard/{{CURRENT_USER}}/transfer">Transfer</a>
+    </div>
+    
+    <div class="right-section">
+
+    <div class="details">
+        <h4>{{ user_name }}</h4>
+        <h4>{{ email }}</h4>
+        <h2 style="font-size: 35px; ">Balance: {{ balance }}</h2>
+    </div>
+    
+    <div class="history">
+
+        <h3> Transaction History</h3>
+
+        <form class="trans-form" name="form1">
+        <select class="btn btn-secondary" id="transaction" name="transaction">
+            <option value="all">All Transactions</option>
+            <option value="sent">Sent</option>
+            <option value="received">Received</option>
+            <option value="deposit">Deposit</option>
+            <option value="withdraw">Withdraw</option>
+        </select>
+        <br>
+        <input style="margin-top: 20px;" class="btn btn-primary"  type="button" value="Go" onclick="showHistory()">
+        </form>
+
+        <table id="all" style="display: block;">
+            <tr>
+                <th>Date</th>
+                <th>Transaction</th>
+                <th>Amount</th>
+            </tr>
+            {% for x in transactions %}
+                <tr>
+                    {% for y in x %}
+                        <td>{{ y }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+
+        <table id="sent" style="display: none;">
+            <tr>
+                <th>Date</th>
+                <th>Sent To</th>
+                <th>Amount</th>
+                {% for x in sent %}
+                    </tr>
+                    {% for y in x %}
+                        <td>{{ y }}</td>
+                    {% endfor %}
+                    <tr>
+                {% endfor %}
+            </tr>
+        </table>
+
+        <table id="received" style="display: none;">
+            <tr>
+                <th>Date</th>
+                <th>Received From</th>
+                <th>Amount</th>
+                {% for x in received %}
+                    </tr>
+                    {% for y in x %}
+                        <td>{{ y }}</td>
+                    {% endfor %}
+                    <tr>
+                {% endfor %}
+            </tr>
+        </table>
+
+        <table id="deposit" style="display: none;">
+            <tr>
+                <th>Date</th>
+                <th>Amount</th>
+                {% for x in deposits %}
+                    </tr>
+                    {% for y in x %}
+                        <td>{{ y }}</td>
+                    {% endfor %}
+                    <tr>
+                {% endfor %}
+            </tr>
+        </table>
+
+        <table id="withdraw" style="display: none;">
+            <tr>
+                <th>Date</th>
+                <th>Amount</th>
+                {% for x in withdrawals %}
+                    </tr>
+                    {% for y in x %}
+                        <td>{{ y }}</td>
+                    {% endfor %}
+                    <tr>
+                {% endfor %}
+            </tr>
+        </table>
+
+    </div>
+
+    </div>
+
+
+<script>
+    function showHistory() {
+        transaction_type = document.getElementById('transaction').value;
+        console.log(transaction_type)
+
+        table = document.getElementById(transaction_type)
+        table.style.display = 'block'
+        document.querySelectorAll('table').forEach(function(item) {
+            if (item.id != transaction_type){
+                item.style.display = 'none'
+            }
+        })
+    }
+
+</script>
+
+{% endblock %}
+</body>
+</html>

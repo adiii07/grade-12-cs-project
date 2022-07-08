@@ -1,0 +1,59 @@
+.menu {
+    padding: 10px;
+    padding-left: 30px;
+    margin: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: #136f637f;
+    width: 16vw;
+    position: fixed;
+    left: 30px;
+    top: 100px;
+    border-radius: 5px;
+}
+
+.menu a{
+    margin: 10px 0;
+    color: #D1E3DD;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.right-section {
+    margin-left: 30vw;
+    margin-bottom: 50px;
+}
+
+.details {
+    margin: 30px 0;
+    /* position: fixed; */
+    /* top: 50px; */
+}
+
+.history{
+    margin-top: 50px;
+}
+
+table {
+    margin: 50px 0;
+}
+
+.trans-form {
+    margin-top: 30px;
+}
+
+tbody, th, td {
+    border: 1px solid white;
+  }
+
+th, td {
+    padding: 10px;
+}
+
+th {
+    background-color: #136f63;
+}
