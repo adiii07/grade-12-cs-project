@@ -1,5 +1,4 @@
 asgiref==3.5.2
-boto==2.49.0
 Django==4.0.6
 django-crispy-forms==1.14.0
 django-mysql==4.7.0
