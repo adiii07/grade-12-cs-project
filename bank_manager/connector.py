@@ -1,12 +1,11 @@
-import mysql.connector
-
 import os
-from boto.s3.connection import S3Connection # to access db password safely in production
+
+import mysql.connector
 
 mydb = mysql.connector.connect(
     host="sql6.freemysqlhosting.net",
     user="sql6504581",
-    password=S3Connection(os.environ['DB_PASSWORD']),
+    password=os.environ.get('DB_PASSWORD'),
     database="sql6504581"
 )
 mycursor = mydb.cursor(buffered=True)
