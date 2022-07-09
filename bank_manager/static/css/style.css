@@ -119,6 +119,24 @@ nav {
     align-items: space-around;
   }
   
+.bank-logo {
+    float: right;
+    width: 35%;
+    margin: 100px 100px 0 0;
+}
+
+@media screen and (max-width: 768px) {
+    .register-form {
+      margin: 10%;
+    }
+
+    .bank-logo {
+      float: none;
+      margin: 50px 0;
+      width: 70%;
+  }
+  }
+
 .register-form input {
       padding: 10px;
       border-radius: 10px;
@@ -128,15 +146,9 @@ nav {
     margin-left: 30px;
 }
   
-  .form-group {
+.form-group {
     margin: 30px;
   }
-
-.bank-logo {
-    float: right;
-    width: 35%;
-    margin: 100px 100px 0 0;
-}
 
 .main-btn {
   background: #d9ad34;

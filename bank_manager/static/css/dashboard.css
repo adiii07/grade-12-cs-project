@@ -5,7 +5,7 @@
     display: flex;
     flex-flow: column nowrap;
     background-color: #136f637f;
-    width: 16vw;
+    width: 200px;
     position: fixed;
     left: 30px;
     top: 100px;
@@ -26,6 +26,16 @@
 .right-section {
     margin-left: 30vw;
     margin-bottom: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        position: static;
+        margin: 30px;
+    }
+    .right-section {
+        margin: 30px;
+    }
 }
 
 .details {
