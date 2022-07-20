@@ -3,10 +3,14 @@ import os
 import mysql.connector
 
 mydb = mysql.connector.connect(
-    host="sql6.freemysqlhosting.net",
-    user="sql6504581",
-    password=os.environ.get('DB_PASSWORD'),
-    database="sql6504581"
+    # host="sql6.freemysqlhosting.net",
+    # user="sql6504581",
+    # password=os.environ.get('DB_PASSWORD'),
+    # database="sql6504581"
+    host = "sql.freedb.tech",
+    user = "freedb_aditya",
+    password = os.environ.get('DB_PASSWORD'),
+    database = "freedb_brs_bank"
 )
 mycursor = mydb.cursor(buffered=True)
 
