@@ -11,7 +11,7 @@
     {% block body %}
 
     {% load crispy_forms_tags %}
-    <form action="" method="post" class="register-form">
+    <form action="" method="post" class="transaction-form">
         {% csrf_token %}
         {{ form|crispy }}
         <input type="submit" value="Deposit" class="submit-button">

@@ -4,7 +4,7 @@
     margin: 20px;
     display: flex;
     flex-flow: column nowrap;
-    background-color: #136f637f;
+    background-color: #333366a1;
     width: 200px;
     position: fixed;
     left: 30px;
@@ -65,5 +65,5 @@ th, td {
 }
 
 th {
-    background-color: #136f63;
+    background-color: #333366a1;
 }
