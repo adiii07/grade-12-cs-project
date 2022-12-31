@@ -3,15 +3,13 @@ import os
 import mysql.connector
 
 mydb = mysql.connector.connect(
-    # host="sql6.freemysqlhosting.net",
-    # user="sql6504581",
-    # password=os.environ.get('DB_PASSWORD'),
-    # database="sql6504581"
-    host = "sql.freedb.tech",
-    user = "freedb_aditya",
+    username = "doadmin",
     password = os.environ.get('DB_PASSWORD'),
-    database = "freedb_brs_bank"
+    host = "db-mysql-blr1-46193-do-user-12001330-0.b.db.ondigitalocean.com",
+    port = "25060",
+    database = "defaultdb",
 )
+
 mycursor = mydb.cursor(buffered=True)
 
 
