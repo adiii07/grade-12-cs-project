@@ -4,6 +4,8 @@ BRS Bank is an Online Banking System built using Django and MySQL.
 
 It was built for my grade 12 Computer Science project which required the use of Python and  the mysql.connector library. It was built to emulate the working of online banking systems.  
 
+[link](https://bankofbrs-6oblu.ondigitalocean.app/)
+
 ## Features
 
 - Opening a bank account, Logging in to your account
